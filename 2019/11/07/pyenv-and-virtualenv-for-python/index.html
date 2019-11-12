@@ -5,13 +5,17 @@
   
 
   
-  <title>Daniel&#39;s blogs</title>
+  <title>Python-environment-management: pyenv + virtualenv + virtaulenvwrapper | Daniel&#39;s blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Daniel&#39;s blogs">
-<meta property="og:url" content="https:&#x2F;&#x2F;danielpei.github.io&#x2F;index.html">
+  <meta name="description" content="[TOC] pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。 pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。  需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性；  virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环">
+<meta name="keywords" content="python,pyenv,virtualenv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python-environment-management: pyenv + virtualenv + virtaulenvwrapper">
+<meta property="og:url" content="https:&#x2F;&#x2F;danielpei.github.io&#x2F;2019&#x2F;11&#x2F;07&#x2F;pyenv-and-virtualenv-for-python&#x2F;index.html">
 <meta property="og:site_name" content="Daniel&#39;s blogs">
+<meta property="og:description" content="[TOC] pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。 pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。  需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性；  virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-12T15:29:37.000Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Daniel&#39;s blogs" type="application/atom+xml">
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-pyenv-and-virtualenv-for-python" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-pyenv-and-virtualenv-for-python" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/07/pyenv-and-virtualenv-for-python/" class="article-date">
   <time datetime="2019-11-07T15:20:33.000Z" itemprop="datePublished">2019-11-07</time>
@@ -78,8 +80,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/pyenv-and-virtualenv-for-python/">Python-environment-management: pyenv + virtualenv + virtaulenvwrapper</a>
+    <h1 class="article-title" itemprop="name">
+      Python-environment-management: pyenv + virtualenv + virtaulenvwrapper
     </h1>
   
 
@@ -130,132 +132,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-pydoc-basic-command" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/05/pydoc-basic-command/" class="article-date">
-  <time datetime="2019-11-05T14:43:09.000Z" itemprop="datePublished">2019-11-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>►<a class="article-category-link" href="/categories/python/pydoc/">pydoc</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/05/pydoc-basic-command/">pydoc-basic-command</a>
-    </h1>
+    <a href="/2019/11/05/pydoc-basic-command/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">pydoc-basic-command</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>This is a post</p>
-<p>Pydoc can be used to access the doc for python modules or classes easily. We will show the basic command for the pydoc.</p>
-<ol>
-<li><p><strong>Show help for pydoc</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">pydoc -h</span><br><span class="line"></span><br><span class="line">pydoc - the Python documentation tool</span><br><span class="line"></span><br><span class="line">pydoc &lt;name&gt; ...</span><br><span class="line">    Show text documentation on something.  &lt;name&gt; may be the name of a</span><br><span class="line">    Python keyword, topic, <span class="keyword">function</span>, module, or package, or a dotted</span><br><span class="line">    reference to a class or <span class="keyword">function</span> within a module or module <span class="keyword">in</span> a</span><br><span class="line">    package.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is used as the path to a</span><br><span class="line">    Python <span class="built_in">source</span> file to document. If name is <span class="string">'keywords'</span>, <span class="string">'topics'</span>,</span><br><span class="line">    or <span class="string">'modules'</span>, a listing of these things is displayed.</span><br><span class="line"></span><br><span class="line">pydoc -k &lt;keyword&gt;</span><br><span class="line">    Search <span class="keyword">for</span> a keyword <span class="keyword">in</span> the synopsis lines of all available modules.</span><br><span class="line"></span><br><span class="line">pydoc -p &lt;port&gt;</span><br><span class="line">    Start an HTTP server on the given port on the <span class="built_in">local</span> machine.  Port</span><br><span class="line">    number 0 can be used to get an arbitrary unused port.</span><br><span class="line"></span><br><span class="line">pydoc -g</span><br><span class="line">    Pop up a graphical interface <span class="keyword">for</span> finding and serving documentation.</span><br><span class="line"></span><br><span class="line">pydoc -w &lt;name&gt; ...</span><br><span class="line">    Write out the HTML documentation <span class="keyword">for</span> a module to a file <span class="keyword">in</span> the current</span><br><span class="line">    directory.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is treated as a filename; <span class="keyword">if</span></span><br><span class="line">    it names a directory, documentation is written <span class="keyword">for</span> all the contents.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Show document for a python module.</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc pow</span><br><span class="line"></span><br><span class="line">Help on built-in <span class="keyword">function</span> pow <span class="keyword">in</span> module __builtin__:</span><br><span class="line"></span><br><span class="line">pow(...)</span><br><span class="line">    pow(x, y[, z]) -&gt; number</span><br><span class="line"></span><br><span class="line">    With two arguments, equivalent to x**y.  With three arguments,</span><br><span class="line">    equivalent to (x**y) % z, but may be more efficient (e.g. <span class="keyword">for</span> longs).</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Search python modules with specific keyword</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Find python modules which name contains "json"</span></span><br><span class="line">python -m pydoc -k json</span><br><span class="line"></span><br><span class="line">json - JSON (JavaScript Object Notation) &lt;http://json.org&gt; is a subset of</span><br><span class="line">json.decoder - Implementation of JSONDecoder</span><br><span class="line">json.encoder - Implementation of JSONEncoder</span><br><span class="line">json.scanner - JSON token scanner</span><br><span class="line">json.tests</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Start an HTTP server for pydoc on the given port</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc -p 4000</span><br><span class="line"><span class="comment"># Open the browser and visit "http://localhost:4000" to view the documents for all your local python modules.</span></span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
-<ol start="5">
-<li><p><strong>Start an HTTP server for pydoc on a free port</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Write out the HTML documentation for a module</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc -w json</span><br><span class="line"><span class="comment"># We will get json.html in current folder.</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://danielpei.github.io/2019/11/05/pydoc-basic-command/" data-id="ck2w0i2om000fckhjdxp57uuz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pydoc/" rel="tag">pydoc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-Deploy-hexo-blog-to-githubPage" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/31/Deploy-hexo-blog-to-githubPage/" class="article-date">
-  <time datetime="2019-10-31T15:56:14.000Z" itemprop="datePublished">2019-10-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/31/Deploy-hexo-blog-to-githubPage/">01-Deploy hexo blog to githubPage</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><p>Install hexo-deployer-git.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo_project</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Edit <strong>_config.yml</strong></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment">#https://github.com/DanielPei/danielpei.github.io</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">[branch]</span> <span class="comment"># master</span></span><br><span class="line"><span class="attr">  message:</span> <span class="string">[message]</span> <span class="comment"># leave this blank</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Deploy</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p><strong>Ref:</strong></p>
-<ol>
-<li><a href="https://hexo.io/docs/one-command-deployment" target="_blank" rel="noopener">Hexo one-command-deploy</a></li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://danielpei.github.io/2019/10/31/Deploy-hexo-blog-to-githubPage/" data-id="ck2w0i2oe000ackhjh8kg6w2j" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
