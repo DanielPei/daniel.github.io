@@ -9,57 +9,26 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <link rel="alternate" href="/atom.xml" title="Daniel's blogs" type="application/atom+xml">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '7.5.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"danielpei.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-  <meta name="description" content="pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。 需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性； virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经">
+  <meta name="description" content="pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。 pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。  需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性；  virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系">
 <meta name="keywords" content="python,pyenv,virtualenv">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python-environment-management: pyenv + virtualenv + virtaulenvwrapper">
 <meta property="og:url" content="https:&#x2F;&#x2F;danielpei.github.io&#x2F;2019&#x2F;11&#x2F;07&#x2F;pyenv-and-virtualenv-for-python&#x2F;index.html">
 <meta property="og:site_name" content="Daniel&#39;s blogs">
-<meta property="og:description" content="pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。 需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性； virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经">
+<meta property="og:description" content="pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。 pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。  需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性；  virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-12T15:31:21.000Z">
+<meta property="og:updated_time" content="2020-04-11T13:55:13.893Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://danielpei.github.io/2019/11/07/pyenv-and-virtualenv-for-python/">
@@ -69,10 +38,9 @@
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
   };
 </script>
 
@@ -115,17 +83,6 @@
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Daniel's blogs</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-  </div>
-
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
@@ -133,30 +90,36 @@
       <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Daniel's blogs</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -164,29 +127,34 @@
         </a>
       </li>
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="Searching..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -202,14 +170,13 @@
         <div class="content-wrap">
           
 
-          <div class="content">
+          <div class="content post posts-expand">
             
 
-  <div class="posts-expand">
-      
+    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://danielpei.github.io/2019/11/07/pyenv-and-virtualenv-for-python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -229,7 +196,7 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
@@ -237,26 +204,22 @@
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-12 23:31:21" itemprop="dateModified" datetime="2019-11-12T23:31:21+08:00">2019-11-12</time>
+                <time title="Modified: 2020-04-11 21:55:13" itemprop="dateModified" datetime="2020-04-11T21:55:13+08:00">2020-04-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">tools</span>
-                  </a>
+                  <a href="/categories/python/tools/" itemprop="url" rel="index"><span itemprop="name">tools</span></a>
                 </span>
             </span>
 
@@ -265,11 +228,11 @@
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
+        <i class="far fa-comment"></i>
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2019/11/07/pyenv-and-virtualenv-for-python/#comments" itemprop="discussionUrl">
+    <a title="disqus" href="/2019/11/07/pyenv-and-virtualenv-for-python/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/07/pyenv-and-virtualenv-for-python/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -285,13 +248,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>pyenv</strong> 与 <strong>virtualenv</strong> 是两个目的不同的 python 环境管理工具。</p><p><strong>pyenv</strong> ： <strong>版本切换</strong>。用于在多个不同的python版本之间进行切换并互不影响。</p><ul>
+        <p><strong>pyenv</strong> 与 <strong>virtualenv</strong> 是两个目的不同的 python 环境管理工具。</p>
+<p><strong>pyenv</strong> ： <strong>版本切换</strong>。用于在多个不同的python版本之间进行切换并互不影响。</p>
+<ul>
 <li>需要临时<strong>引用／安装</strong>当前python版本不支持的模块／库；</li>
 <li>测试／验证不同python版本间兼容性；</li>
-</ul><p><strong>virtualenv</strong> : <strong>site-packages隔离</strong>。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经安装的 python 包影响。同时，在该环境中安装 python 包也不会影响其他项目。</p><a id="more"></a>
-
-
-
+</ul>
+<p><strong>virtualenv</strong> : <strong>site-packages隔离</strong>。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经安装的 python 包影响。同时，在该环境中安装 python 包也不会影响其他项目。</p>
 <ul>
 <li>需要使用某一个工具／模块／类库的不同版本；</li>
 </ul>
@@ -299,19 +262,19 @@
 <ul>
 <li>快速激活／去激活某个 virtualenv 创建的虚拟环境；</li>
 </ul>
-<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew install pyenv</span><br><span class="line">pip install virtualenv</span><br><span class="line">pip install virtualenvwrapper</span><br><span class="line"></span><br><span class="line"><span class="comment"># add the below line into ~/.bash_profile or ~/.zshrc, to auto-active pyenv</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">which</span> pyenv &gt; /dev/null; <span class="keyword">then</span> <span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span>; <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a root path for virtualenvs we will created by virtualenv and virtualenvwrapper.</span></span><br><span class="line">mkdir ~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set default path for virutalenvs in .zshrc or .bashrc.</span></span><br><span class="line"><span class="built_in">export</span> WORKON_HOME=~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalenvwrapper in .zshrc or .bashrc.</span></span><br><span class="line"><span class="comment">## As I am using python 3.7 created by pyenv, my virtualenvwrapper.sh script is located in */Users/daniel/.pyenv/versions/3.7.0/bin/virtualenvwrapper.sh*.</span></span><br><span class="line"><span class="built_in">source</span> /usr/<span class="built_in">local</span>/bin/virtualenvwrapper.sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalwrapper right now!</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew install pyenv</span><br><span class="line">pip install virtualenv</span><br><span class="line">pip install virtualenvwrapper</span><br><span class="line"></span><br><span class="line"><span class="comment"># add the below line into ~/.bash_profile or ~/.zshrc, to auto-active pyenv</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">which</span> pyenv &gt; /dev/null; <span class="keyword">then</span> <span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span>; <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a root path for virtualenvs we will created by virtualenv and virtualenvwrapper.</span></span><br><span class="line">mkdir ~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set default path for virutalenvs in .zshrc or .bashrc.</span></span><br><span class="line"><span class="built_in">export</span> WORKON_HOME=~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalenvwrapper in .zshrc or .bashrc.</span></span><br><span class="line"><span class="comment">## As I am using python 3.7 created by pyenv, my virtualenvwrapper.sh script is located in */Users/daniel/.pyenv/versions/3.7.0/bin/virtualenvwrapper.sh*.</span></span><br><span class="line"><span class="built_in">source</span> /usr/<span class="built_in">local</span>/bin/virtualenvwrapper.sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalwrapper right now!</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-pyenv"><a href="#2-pyenv" class="headerlink" title="2. pyenv"></a>2. pyenv</h2><p><strong>场景</strong>：Mac 自带的 python 版本为 2.7，遇到一个项目 <em>py3_project</em> 使用 python 3.X 的一些新特性，这时就需要用到 pyenv 将 python 版本临时切换到 3.X (随时可以一条命令再切换回来）。</p>
+<h1 id="pyenv"><a href="#pyenv" class="headerlink" title="pyenv"></a>pyenv</h1><p><strong>场景</strong>：Mac 自带的 python 版本为 2.7，遇到一个项目 <em>py3_project</em> 使用 python 3.X 的一些新特性，这时就需要用到 pyenv 将 python 版本临时切换到 3.X (随时可以一条命令再切换回来）。</p>
 <p>pyenv 常用命令及场景：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看当前系统 python 版本：</span></span><br><span class="line">python --version</span><br><span class="line"><span class="comment"># Python 2.7.10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看本地 pyenv 当前有哪些版本。可以看到当前直邮系统默认的 python 版本。</span></span><br><span class="line">pyenv versions</span><br><span class="line">* system (<span class="built_in">set</span> by /Users/daniel/.pyenv/version)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 python 3.7.0 </span></span><br><span class="line">pyenv install 3.7.0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前已安装版本。 system 前的 * 表示当前正在使用的 python 版本</span></span><br><span class="line">pyenv versions</span><br><span class="line">* system (<span class="built_in">set</span> by /Users/daniel/.pyenv/version)</span><br><span class="line">  3.7.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到 3.7.0 版本</span></span><br><span class="line">mkdir py3_project</span><br><span class="line"><span class="built_in">cd</span> py3_project</span><br><span class="line">pyenv <span class="built_in">local</span> 3.7.0	<span class="comment"># 只切换本目录。 如果希望全局切换，使用 pyenv global 3.7.0</span></span><br><span class="line"></span><br><span class="line">pyenv versions 		<span class="comment"># 本目录切换为 3.7.0 </span></span><br><span class="line">  system</span><br><span class="line">* 3.7.0 (<span class="built_in">set</span> by PYENV_VERSION environment variable)</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">pyenv versions		<span class="comment"># 其他目录未受影响，仍未系统python版本</span></span><br><span class="line">* system (<span class="built_in">set</span> by /Users/daniel/.pyenv/version)</span><br><span class="line">  3.7.0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复项目或目录python版本（一般用不到）</span></span><br><span class="line"><span class="built_in">cd</span> py3_project</span><br><span class="line">pyenv <span class="built_in">local</span> system</span><br><span class="line"></span><br><span class="line">pyenv versions</span><br><span class="line">* system (<span class="built_in">set</span> by /Users/daniel/pyenv_demo/.python-version)</span><br><span class="line">  3.7.0</span><br></pre></td></tr></table></figure>
 
 <p>pyenv 帮助:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">pyenv</span><br><span class="line">pyenv 1.2.10</span><br><span class="line">Usage: pyenv &lt;<span class="built_in">command</span>&gt; [&lt;args&gt;]</span><br><span class="line"></span><br><span class="line">Some useful pyenv commands are:</span><br><span class="line">   commands    List all available pyenv commands</span><br><span class="line">   <span class="built_in">local</span>       Set or show the <span class="built_in">local</span> application-specific Python version</span><br><span class="line">   global      Set or show the global Python version</span><br><span class="line">   shell       Set or show the shell-specific Python version</span><br><span class="line">   install     Install a Python version using python-build</span><br><span class="line">   uninstall   Uninstall a specific Python version</span><br><span class="line">   <span class="built_in">rehash</span>      Rehash pyenv shims (run this after installing executables)</span><br><span class="line">   version     Show the current Python version and its origin</span><br><span class="line">   versions    List all Python versions available to pyenv</span><br><span class="line">   <span class="built_in">which</span>       Display the full path to an executable</span><br><span class="line">   <span class="built_in">whence</span>      List all Python versions that contain the given executable</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-virtualenv-virtualenvwrapper"><a href="#3-virtualenv-virtualenvwrapper" class="headerlink" title="3. virtualenv  + virtualenvwrapper"></a>3. virtualenv  + virtualenvwrapper</h2><p><strong>场景</strong>：同时有两个项目 A 和 B，都需要使用 request 包，但由于外部依赖或兼容老系统等原因，A 和 B 需要使用的 request 包的版本有差异。此时，可以创建两个不同的虚拟环境，在各自的环境下分别安装对应版本的 request 包。</p>
+<h1 id="virtualenv-virtualenvwrapper"><a href="#virtualenv-virtualenvwrapper" class="headerlink" title="virtualenv  + virtualenvwrapper"></a>virtualenv  + virtualenvwrapper</h1><p><strong>场景</strong>：同时有两个项目 A 和 B，都需要使用 request 包，但由于外部依赖或兼容老系统等原因，A 和 B 需要使用的 request 包的版本有差异。此时，可以创建两个不同的虚拟环境，在各自的环境下分别安装对应版本的 request 包。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a virtualenv named py3dev.</span></span><br><span class="line">mkvirtualenv py3dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a virtualenv named py3dev ignore the system site packages.</span></span><br><span class="line">mkvirtualenv --no-site-packages py3dev </span><br><span class="line"></span><br><span class="line"><span class="comment"># List virutalenvs.</span></span><br><span class="line">lsvirtualenv</span><br><span class="line"></span><br><span class="line"><span class="comment"># Work on a *py3dev* virutalenv.</span></span><br><span class="line">workon py3dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># Exit a virtualenv</span></span><br><span class="line">deactivate</span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove a virutalenv</span></span><br><span class="line">rmvirtualenv py3dev</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-Task-：-分别创建-python-2-X-和-python-3-X-的虚拟环境"><a href="#4-Task-：-分别创建-python-2-X-和-python-3-X-的虚拟环境" class="headerlink" title="4. Task ： 分别创建 python 2.X 和 python 3.X 的虚拟环境"></a>4. Task ： 分别创建 python 2.X 和 python 3.X 的虚拟环境</h2><p>python 2.X 虚拟环境创建</p>
+<h1 id="Task-：-分别创建-python-2-X-和-python-3-X-的虚拟环境"><a href="#Task-：-分别创建-python-2-X-和-python-3-X-的虚拟环境" class="headerlink" title="Task ： 分别创建 python 2.X 和 python 3.X 的虚拟环境"></a>Task ： 分别创建 python 2.X 和 python 3.X 的虚拟环境</h1><p>python 2.X 虚拟环境创建</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#确保切换成功，我建议 source .zshrc 一下在切换</span></span><br><span class="line"><span class="comment">#安装全新的Python2.7.10版本</span></span><br><span class="line">pyenv install 2.7.10</span><br><span class="line">pyenv <span class="built_in">rehash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#切换到刚安装的这个版本</span></span><br><span class="line">pyenv <span class="built_in">local</span> 2.7.10</span><br><span class="line"><span class="comment">#确保切换成功</span></span><br><span class="line"><span class="built_in">source</span> .zshrc</span><br><span class="line"><span class="comment">#验证一下版本,pip发现里面包很少</span></span><br><span class="line">pip list</span><br><span class="line"><span class="comment">#验证版本</span></span><br><span class="line">python -V</span><br><span class="line"><span class="comment">#务必在这个新的2.7.10中安装</span></span><br><span class="line">pip install virtualenv</span><br><span class="line">pip install virtualenvwrapper</span><br><span class="line"><span class="comment">#务必</span></span><br><span class="line"><span class="built_in">source</span> .zshrc</span><br><span class="line"><span class="comment">#创建2.7.10的开发环境</span></span><br><span class="line">mkvirtualenv py2dev</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建完某版本的开发环境后务必退出，当前虚拟环境，不然就是虚拟环境中在创建了。</span></span><br><span class="line">deactivate</span><br><span class="line"><span class="comment">#退出2.7.10环境</span></span><br><span class="line">pyenv <span class="built_in">local</span> --<span class="built_in">unset</span> 2.7.10</span><br><span class="line"><span class="built_in">source</span> .zshrc</span><br></pre></td></tr></table></figure>
 
 <p>python 3.x 虚拟环境创建类似 2.x</p>
@@ -331,21 +294,18 @@
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/06/01-sphinx-basic/" rel="next" title="01-sphinx : basic demo">
-                  <i class="fa fa-chevron-left"></i> 01-sphinx : basic demo
-                </a>
-            </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/14/Local-search-for-hexo/" rel="prev" title="Local search for hexo">
-                  Local search for hexo <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/11/06/01-sphinx-basic/" rel="prev" title="01-sphinx : basic demo">
+      <i class="fa fa-chevron-left"></i> 01-sphinx : basic demo
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/11/14/Local-search-for-hexo/" rel="next" title="Local search for hexo">
+      Local search for hexo <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
     
   </article>
@@ -353,18 +313,39 @@
   
   
 
-  </div>
 
 
           </div>
           
     
-  <div class="comments" id="comments">
+  <div class="comments">
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
     </div>
   </div>
   
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
@@ -389,7 +370,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装"><span class="nav-number">1.</span> <span class="nav-text">1. 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-pyenv"><span class="nav-number">2.</span> <span class="nav-text">2. pyenv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-virtualenv-virtualenvwrapper"><span class="nav-number">3.</span> <span class="nav-text">3. virtualenv  + virtualenvwrapper</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Task-：-分别创建-python-2-X-和-python-3-X-的虚拟环境"><span class="nav-number">4.</span> <span class="nav-text">4. Task ： 分别创建 python 2.X 和 python 3.X 的虚拟环境</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pyenv"><span class="nav-number">2.</span> <span class="nav-text">pyenv</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#virtualenv-virtualenvwrapper"><span class="nav-number">3.</span> <span class="nav-text">virtualenv  + virtualenvwrapper</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Task-：-分别创建-python-2-X-和-python-3-X-的虚拟环境"><span class="nav-number">4.</span> <span class="nav-text">Task ： 分别创建 python 2.X 和 python 3.X 的虚拟环境</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -409,23 +390,16 @@
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-          
         <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-          
         <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
-  <div class="feed-link motion-element">
-    <a href="/atom.xml" rel="alternate">
-      <i class="fa fa-rss"></i>RSS
-    </a>
-  </div>
 
 
 
@@ -443,19 +417,18 @@
       <div class="footer-inner">
         
 
+        
+
 <div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Daniel Pei</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.5.0
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
         
@@ -467,11 +440,6 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
@@ -504,7 +472,6 @@
 
 
 
-
   
 
   
@@ -520,16 +487,16 @@
   window.addEventListener('load', loadCount, false);
 </script>
 <script>
-  function loadComments() {
+  var disqus_config = function() {
+    this.page.url = "https://danielpei.github.io/2019/11/07/pyenv-and-virtualenv-for-python/";
+    this.page.identifier = "2019/11/07/pyenv-and-virtualenv-for-python/";
+    this.page.title = "Python-environment-management: pyenv + virtualenv + virtaulenvwrapper";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
       DISQUS.reset({
         reload: true,
-        config: {page: {
-            url: "https://danielpei.github.io/2019/11/07/pyenv-and-virtualenv-for-python/",
-            identifier: "2019/11/07/pyenv-and-virtualenv-for-python/",
-            title: "Python-environment-management: pyenv + virtualenv + virtaulenvwrapper"
-          }
-        }
+        config: disqus_config
       });
     } else {
       var d = document, s = d.createElement('script');
@@ -537,8 +504,7 @@
       s.setAttribute('data-timestamp', '' + +new Date());
       (d.head || d.body).appendChild(s);
     }
-  }
-    window.addEventListener('load', loadComments, false);
+  });
 </script>
 
 </body>
