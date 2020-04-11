@@ -3,10 +3,10 @@
   <entry>
     <title>Local search for hexo</title>
     <url>/2019/11/14/Local-search-for-hexo/</url>
-    <content><![CDATA[<p>Enable local search for hexo blog with <strong>next</strong> theme.</p>
-<h1 id="1-Install-Local-Search-plugin"><a href="#1-Install-Local-Search-plugin" class="headerlink" title="1. Install Local Search plugin."></a>1. Install <strong>Local Search</strong> plugin.</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p>Enable local search for hexo blog with <strong>next</strong> theme.</p><h1 id="1-Install-Local-Search-plugin"><a href="#1-Install-Local-Search-plugin" class="headerlink" title="1. Install Local Search plugin."></a>1. Install <strong>Local Search</strong> plugin.</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure><h1 id="2-Edit-site-config-config-yml"><a href="#2-Edit-site-config-config-yml" class="headerlink" title="2. Edit site config : _config.yml"></a>2. Edit site config : <strong>_config.yml</strong></h1><a id="more"></a>
 
-<h1 id="2-Edit-site-config-config-yml"><a href="#2-Edit-site-config-config-yml" class="headerlink" title="2. Edit site config : _config.yml"></a>2. Edit site config : <strong>_config.yml</strong></h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add these config to any position.</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add these config to any position.</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
 
 <h1 id="3-Edit-theme-config-themes-next-config-yml"><a href="#3-Edit-theme-config-themes-next-config-yml" class="headerlink" title="3. Edit theme config : themes/next/_config.yml"></a>3. Edit theme config : <strong>themes/next/_config.yml</strong></h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
@@ -24,13 +24,13 @@
   <entry>
     <title>Python-environment-management: pyenv + virtualenv + virtaulenvwrapper</title>
     <url>/2019/11/07/pyenv-and-virtualenv-for-python/</url>
-    <content><![CDATA[<p><strong>pyenv</strong> 与 <strong>virtualenv</strong> 是两个目的不同的 python 环境管理工具。</p>
-<p><strong>pyenv</strong> ： <strong>版本切换</strong>。用于在多个不同的python版本之间进行切换并互不影响。</p>
-<ul>
+    <content><![CDATA[<p><strong>pyenv</strong> 与 <strong>virtualenv</strong> 是两个目的不同的 python 环境管理工具。</p><p><strong>pyenv</strong> ： <strong>版本切换</strong>。用于在多个不同的python版本之间进行切换并互不影响。</p><ul>
 <li>需要临时<strong>引用／安装</strong>当前python版本不支持的模块／库；</li>
 <li>测试／验证不同python版本间兼容性；</li>
-</ul>
-<p><strong>virtualenv</strong> : <strong>site-packages隔离</strong>。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经安装的 python 包影响。同时，在该环境中安装 python 包也不会影响其他项目。</p>
+</ul><p><strong>virtualenv</strong> : <strong>site-packages隔离</strong>。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经安装的 python 包影响。同时，在该环境中安装 python 包也不会影响其他项目。</p><a id="more"></a>
+
+
+
 <ul>
 <li>需要使用某一个工具／模块／类库的不同版本；</li>
 </ul>
@@ -68,9 +68,9 @@
   <entry>
     <title>01-sphinx : basic demo</title>
     <url>/2019/11/06/01-sphinx-basic/</url>
-    <content><![CDATA[<h1 id="1-Install-sphinx-and-sphinx-rtd-theme"><a href="#1-Install-sphinx-and-sphinx-rtd-theme" class="headerlink" title="1. Install sphinx and sphinx-rtd-theme"></a>1. Install <strong>sphinx</strong> and <strong>sphinx-rtd-theme</strong></h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">workon py3dev </span><br><span class="line"></span><br><span class="line">pip install sphinx</span><br><span class="line">pip install sphinx-rtd-theme</span><br><span class="line"></span><br><span class="line">pip list</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="1-Install-sphinx-and-sphinx-rtd-theme"><a href="#1-Install-sphinx-and-sphinx-rtd-theme" class="headerlink" title="1. Install sphinx and sphinx-rtd-theme"></a>1. Install <strong>sphinx</strong> and <strong>sphinx-rtd-theme</strong></h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">workon py3dev </span><br><span class="line"></span><br><span class="line">pip install sphinx</span><br><span class="line">pip install sphinx-rtd-theme</span><br><span class="line"></span><br><span class="line">pip list</span><br></pre></td></tr></table></figure><h1 id="2-Init-a-project-with-sphinx"><a href="#2-Init-a-project-with-sphinx" class="headerlink" title="2. Init a project with sphinx."></a>2. Init a project with sphinx.</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir sphinx_demo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> sphinx_demo</span><br><span class="line">sphinx-quickstart</span><br><span class="line"></span><br><span class="line"><span class="comment"># Choose seprate source and builder, for other configuration, choose whatever you want.</span></span><br><span class="line"></span><br><span class="line">mkdir src</span><br><span class="line"></span><br><span class="line">tree -L 1</span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── Makefile	<span class="comment"># build script for Unix.</span></span><br><span class="line">├── build 		<span class="comment"># sphinx docs build result.</span></span><br><span class="line">├── make.bat	<span class="comment"># build script for windows os.</span></span><br><span class="line">├── <span class="built_in">source</span>		<span class="comment"># source folder for sphinx docs.</span></span><br><span class="line">└── src 		<span class="comment"># user defined folder for python modules and scripts.</span></span><br></pre></td></tr></table></figure><a id="more"></a>
 
-<h1 id="2-Init-a-project-with-sphinx"><a href="#2-Init-a-project-with-sphinx" class="headerlink" title="2. Init a project with sphinx."></a>2. Init a project with sphinx.</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir sphinx_demo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> sphinx_demo</span><br><span class="line">sphinx-quickstart</span><br><span class="line"></span><br><span class="line"><span class="comment"># Choose seprate source and builder, for other configuration, choose whatever you want.</span></span><br><span class="line"></span><br><span class="line">mkdir src</span><br><span class="line"></span><br><span class="line">tree -L 1</span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── Makefile	<span class="comment"># build script for Unix.</span></span><br><span class="line">├── build 		<span class="comment"># sphinx docs build result.</span></span><br><span class="line">├── make.bat	<span class="comment"># build script for windows os.</span></span><br><span class="line">├── <span class="built_in">source</span>		<span class="comment"># source folder for sphinx docs.</span></span><br><span class="line">└── src 		<span class="comment"># user defined folder for python modules and scripts.</span></span><br></pre></td></tr></table></figure>
+
 
 <h1 id="3-Config-sphinx"><a href="#3-Config-sphinx" class="headerlink" title="3. Config sphinx."></a>3. Config sphinx.</h1><p>Edit <strong>source/conf.py</strong></p>
 <p>3.1 Set python source folder.</p>
@@ -99,9 +99,7 @@
   <entry>
     <title>pydoc-basic-command</title>
     <url>/2019/11/05/pydoc-basic-command/</url>
-    <content><![CDATA[<p>This is a post</p>
-<p>Pydoc can be used to access the doc for python modules or classes easily. We will show the basic command for the pydoc.</p>
-<ol>
+    <content><![CDATA[<p>This is a post</p><p>Pydoc can be used to access the doc for python modules or classes easily. We will show the basic command for the pydoc.</p><ol>
 <li><p><strong>Show help for pydoc</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pydoc -h</span><br><span class="line"></span><br><span class="line">pydoc - the Python documentation tool</span><br><span class="line"></span><br><span class="line">pydoc &lt;name&gt; ...</span><br><span class="line">    Show text documentation on something.  &lt;name&gt; may be the name of a</span><br><span class="line">    Python keyword, topic, <span class="keyword">function</span>, module, or package, or a dotted</span><br><span class="line">    reference to a class or <span class="keyword">function</span> within a module or module <span class="keyword">in</span> a</span><br><span class="line">    package.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is used as the path to a</span><br><span class="line">    Python <span class="built_in">source</span> file to document. If name is <span class="string">'keywords'</span>, <span class="string">'topics'</span>,</span><br><span class="line">    or <span class="string">'modules'</span>, a listing of these things is displayed.</span><br><span class="line"></span><br><span class="line">pydoc -k &lt;keyword&gt;</span><br><span class="line">    Search <span class="keyword">for</span> a keyword <span class="keyword">in</span> the synopsis lines of all available modules.</span><br><span class="line"></span><br><span class="line">pydoc -p &lt;port&gt;</span><br><span class="line">    Start an HTTP server on the given port on the <span class="built_in">local</span> machine.  Port</span><br><span class="line">    number 0 can be used to get an arbitrary unused port.</span><br><span class="line"></span><br><span class="line">pydoc -g</span><br><span class="line">    Pop up a graphical interface <span class="keyword">for</span> finding and serving documentation.</span><br><span class="line"></span><br><span class="line">pydoc -w &lt;name&gt; ...</span><br><span class="line">    Write out the HTML documentation <span class="keyword">for</span> a module to a file <span class="keyword">in</span> the current</span><br><span class="line">    directory.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is treated as a filename; <span class="keyword">if</span></span><br><span class="line">    it names a directory, documentation is written <span class="keyword">for</span> all the contents.</span><br></pre></td></tr></table></figure>
 </li>
@@ -116,7 +114,9 @@
 
 
 </li>
-</ol>
+</ol><a id="more"></a>
+
+
 <ol start="5">
 <li><p><strong>Start an HTTP server for pydoc on a free port</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python -m pydoc -g</span><br></pre></td></tr></table></figure>
@@ -148,7 +148,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
 
 </li>
-</ol>
+</ol><a id="more"></a>
 <p><strong>Ref:</strong></p>
 <ol>
 <li><a href="https://hexo.io/docs/one-command-deployment" target="_blank" rel="noopener">Hexo one-command-deploy</a></li>

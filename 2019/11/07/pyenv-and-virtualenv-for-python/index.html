@@ -51,13 +51,13 @@
   };
 </script>
 
-  <meta name="description" content="pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。 pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。  需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性；  virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系">
+  <meta name="description" content="pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。 需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性； virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经">
 <meta name="keywords" content="python,pyenv,virtualenv">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python-environment-management: pyenv + virtualenv + virtaulenvwrapper">
 <meta property="og:url" content="https:&#x2F;&#x2F;danielpei.github.io&#x2F;2019&#x2F;11&#x2F;07&#x2F;pyenv-and-virtualenv-for-python&#x2F;index.html">
 <meta property="og:site_name" content="Daniel&#39;s blogs">
-<meta property="og:description" content="pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。 pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。  需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性；  virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系">
+<meta property="og:description" content="pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。 需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性； virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-11-12T15:31:21.000Z">
 <meta name="twitter:card" content="summary">
@@ -142,6 +142,16 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -275,13 +285,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>pyenv</strong> 与 <strong>virtualenv</strong> 是两个目的不同的 python 环境管理工具。</p>
-<p><strong>pyenv</strong> ： <strong>版本切换</strong>。用于在多个不同的python版本之间进行切换并互不影响。</p>
-<ul>
+        <p><strong>pyenv</strong> 与 <strong>virtualenv</strong> 是两个目的不同的 python 环境管理工具。</p><p><strong>pyenv</strong> ： <strong>版本切换</strong>。用于在多个不同的python版本之间进行切换并互不影响。</p><ul>
 <li>需要临时<strong>引用／安装</strong>当前python版本不支持的模块／库；</li>
 <li>测试／验证不同python版本间兼容性；</li>
-</ul>
-<p><strong>virtualenv</strong> : <strong>site-packages隔离</strong>。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经安装的 python 包影响。同时，在该环境中安装 python 包也不会影响其他项目。</p>
+</ul><p><strong>virtualenv</strong> : <strong>site-packages隔离</strong>。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经安装的 python 包影响。同时，在该环境中安装 python 包也不会影响其他项目。</p><a id="more"></a>
+
+
+
 <ul>
 <li>需要使用某一个工具／模块／类库的不同版本；</li>
 </ul>
@@ -398,12 +408,16 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">8</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -432,7 +446,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

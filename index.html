@@ -140,6 +140,16 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
@@ -266,16 +276,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Enable local search for hexo blog with <strong>next</strong> theme.</p>
-<h1 id="1-Install-Local-Search-plugin"><a href="#1-Install-Local-Search-plugin" class="headerlink" title="1. Install Local Search plugin."></a>1. Install <strong>Local Search</strong> plugin.</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-Edit-site-config-config-yml"><a href="#2-Edit-site-config-config-yml" class="headerlink" title="2. Edit site config : _config.yml"></a>2. Edit site config : <strong>_config.yml</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Add these config to any position.</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
-
-<h1 id="3-Edit-theme-config-themes-next-config-yml"><a href="#3-Edit-theme-config-themes-next-config-yml" class="headerlink" title="3. Edit theme config : themes/next/_config.yml"></a>3. Edit theme config : <strong>themes/next/_config.yml</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="4-Restart-your-blog"><a href="#4-Restart-your-blog" class="headerlink" title="4. Restart your blog."></a>4. Restart your blog.</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-
+          <p>Enable local search for hexo blog with <strong>next</strong> theme.</p><h1 id="1-Install-Local-Search-plugin"><a href="#1-Install-Local-Search-plugin" class="headerlink" title="1. Install Local Search plugin."></a>1. Install <strong>Local Search</strong> plugin.</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure><h1 id="2-Edit-site-config-config-yml"><a href="#2-Edit-site-config-config-yml" class="headerlink" title="2. Edit site config : _config.yml"></a>2. Edit site config : <strong>_config.yml</strong></h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/14/Local-search-for-hexo/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -370,37 +379,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>pyenv</strong> 与 <strong>virtualenv</strong> 是两个目的不同的 python 环境管理工具。</p>
-<p><strong>pyenv</strong> ： <strong>版本切换</strong>。用于在多个不同的python版本之间进行切换并互不影响。</p>
-<ul>
+          <p><strong>pyenv</strong> 与 <strong>virtualenv</strong> 是两个目的不同的 python 环境管理工具。</p><p><strong>pyenv</strong> ： <strong>版本切换</strong>。用于在多个不同的python版本之间进行切换并互不影响。</p><ul>
 <li>需要临时<strong>引用／安装</strong>当前python版本不支持的模块／库；</li>
 <li>测试／验证不同python版本间兼容性；</li>
-</ul>
-<p><strong>virtualenv</strong> : <strong>site-packages隔离</strong>。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经安装的 python 包影响。同时，在该环境中安装 python 包也不会影响其他项目。</p>
-<ul>
-<li>需要使用某一个工具／模块／类库的不同版本；</li>
-</ul>
-<p><strong>virtaulenvwrapper</strong> 则是对 <strong>virtualenv</strong> 创建的虚拟环境进行管理的工具。</p>
-<ul>
-<li>快速激活／去激活某个 virtualenv 创建的虚拟环境；</li>
-</ul>
-<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew install pyenv</span><br><span class="line">pip install virtualenv</span><br><span class="line">pip install virtualenvwrapper</span><br><span class="line"></span><br><span class="line"><span class="comment"># add the below line into ~/.bash_profile or ~/.zshrc, to auto-active pyenv</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">which</span> pyenv &gt; /dev/null; <span class="keyword">then</span> <span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span>; <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a root path for virtualenvs we will created by virtualenv and virtualenvwrapper.</span></span><br><span class="line">mkdir ~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set default path for virutalenvs in .zshrc or .bashrc.</span></span><br><span class="line"><span class="built_in">export</span> WORKON_HOME=~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalenvwrapper in .zshrc or .bashrc.</span></span><br><span class="line"><span class="comment">## As I am using python 3.7 created by pyenv, my virtualenvwrapper.sh script is located in */Users/daniel/.pyenv/versions/3.7.0/bin/virtualenvwrapper.sh*.</span></span><br><span class="line"><span class="built_in">source</span> /usr/<span class="built_in">local</span>/bin/virtualenvwrapper.sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalwrapper right now!</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-pyenv"><a href="#2-pyenv" class="headerlink" title="2. pyenv"></a>2. pyenv</h2><p><strong>场景</strong>：Mac 自带的 python 版本为 2.7，遇到一个项目 <em>py3_project</em> 使用 python 3.X 的一些新特性，这时就需要用到 pyenv 将 python 版本临时切换到 3.X (随时可以一条命令再切换回来）。</p>
-<p>pyenv 常用命令及场景：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看当前系统 python 版本：</span></span><br><span class="line">python --version</span><br><span class="line"><span class="comment"># Python 2.7.10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看本地 pyenv 当前有哪些版本。可以看到当前直邮系统默认的 python 版本。</span></span><br><span class="line">pyenv versions</span><br><span class="line">* system (<span class="built_in">set</span> by /Users/daniel/.pyenv/version)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 python 3.7.0 </span></span><br><span class="line">pyenv install 3.7.0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前已安装版本。 system 前的 * 表示当前正在使用的 python 版本</span></span><br><span class="line">pyenv versions</span><br><span class="line">* system (<span class="built_in">set</span> by /Users/daniel/.pyenv/version)</span><br><span class="line">  3.7.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到 3.7.0 版本</span></span><br><span class="line">mkdir py3_project</span><br><span class="line"><span class="built_in">cd</span> py3_project</span><br><span class="line">pyenv <span class="built_in">local</span> 3.7.0	<span class="comment"># 只切换本目录。 如果希望全局切换，使用 pyenv global 3.7.0</span></span><br><span class="line"></span><br><span class="line">pyenv versions 		<span class="comment"># 本目录切换为 3.7.0 </span></span><br><span class="line">  system</span><br><span class="line">* 3.7.0 (<span class="built_in">set</span> by PYENV_VERSION environment variable)</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">pyenv versions		<span class="comment"># 其他目录未受影响，仍未系统python版本</span></span><br><span class="line">* system (<span class="built_in">set</span> by /Users/daniel/.pyenv/version)</span><br><span class="line">  3.7.0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复项目或目录python版本（一般用不到）</span></span><br><span class="line"><span class="built_in">cd</span> py3_project</span><br><span class="line">pyenv <span class="built_in">local</span> system</span><br><span class="line"></span><br><span class="line">pyenv versions</span><br><span class="line">* system (<span class="built_in">set</span> by /Users/daniel/pyenv_demo/.python-version)</span><br><span class="line">  3.7.0</span><br></pre></td></tr></table></figure>
-
-<p>pyenv 帮助:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">pyenv</span><br><span class="line">pyenv 1.2.10</span><br><span class="line">Usage: pyenv &lt;<span class="built_in">command</span>&gt; [&lt;args&gt;]</span><br><span class="line"></span><br><span class="line">Some useful pyenv commands are:</span><br><span class="line">   commands    List all available pyenv commands</span><br><span class="line">   <span class="built_in">local</span>       Set or show the <span class="built_in">local</span> application-specific Python version</span><br><span class="line">   global      Set or show the global Python version</span><br><span class="line">   shell       Set or show the shell-specific Python version</span><br><span class="line">   install     Install a Python version using python-build</span><br><span class="line">   uninstall   Uninstall a specific Python version</span><br><span class="line">   <span class="built_in">rehash</span>      Rehash pyenv shims (run this after installing executables)</span><br><span class="line">   version     Show the current Python version and its origin</span><br><span class="line">   versions    List all Python versions available to pyenv</span><br><span class="line">   <span class="built_in">which</span>       Display the full path to an executable</span><br><span class="line">   <span class="built_in">whence</span>      List all Python versions that contain the given executable</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-virtualenv-virtualenvwrapper"><a href="#3-virtualenv-virtualenvwrapper" class="headerlink" title="3. virtualenv  + virtualenvwrapper"></a>3. virtualenv  + virtualenvwrapper</h2><p><strong>场景</strong>：同时有两个项目 A 和 B，都需要使用 request 包，但由于外部依赖或兼容老系统等原因，A 和 B 需要使用的 request 包的版本有差异。此时，可以创建两个不同的虚拟环境，在各自的环境下分别安装对应版本的 request 包。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a virtualenv named py3dev.</span></span><br><span class="line">mkvirtualenv py3dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a virtualenv named py3dev ignore the system site packages.</span></span><br><span class="line">mkvirtualenv --no-site-packages py3dev </span><br><span class="line"></span><br><span class="line"><span class="comment"># List virutalenvs.</span></span><br><span class="line">lsvirtualenv</span><br><span class="line"></span><br><span class="line"><span class="comment"># Work on a *py3dev* virutalenv.</span></span><br><span class="line">workon py3dev</span><br><span class="line"></span><br><span class="line"><span class="comment"># Exit a virtualenv</span></span><br><span class="line">deactivate</span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove a virutalenv</span></span><br><span class="line">rmvirtualenv py3dev</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-Task-：-分别创建-python-2-X-和-python-3-X-的虚拟环境"><a href="#4-Task-：-分别创建-python-2-X-和-python-3-X-的虚拟环境" class="headerlink" title="4. Task ： 分别创建 python 2.X 和 python 3.X 的虚拟环境"></a>4. Task ： 分别创建 python 2.X 和 python 3.X 的虚拟环境</h2><p>python 2.X 虚拟环境创建</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#确保切换成功，我建议 source .zshrc 一下在切换</span></span><br><span class="line"><span class="comment">#安装全新的Python2.7.10版本</span></span><br><span class="line">pyenv install 2.7.10</span><br><span class="line">pyenv <span class="built_in">rehash</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#切换到刚安装的这个版本</span></span><br><span class="line">pyenv <span class="built_in">local</span> 2.7.10</span><br><span class="line"><span class="comment">#确保切换成功</span></span><br><span class="line"><span class="built_in">source</span> .zshrc</span><br><span class="line"><span class="comment">#验证一下版本,pip发现里面包很少</span></span><br><span class="line">pip list</span><br><span class="line"><span class="comment">#验证版本</span></span><br><span class="line">python -V</span><br><span class="line"><span class="comment">#务必在这个新的2.7.10中安装</span></span><br><span class="line">pip install virtualenv</span><br><span class="line">pip install virtualenvwrapper</span><br><span class="line"><span class="comment">#务必</span></span><br><span class="line"><span class="built_in">source</span> .zshrc</span><br><span class="line"><span class="comment">#创建2.7.10的开发环境</span></span><br><span class="line">mkvirtualenv py2dev</span><br><span class="line"></span><br><span class="line"><span class="comment">#创建完某版本的开发环境后务必退出，当前虚拟环境，不然就是虚拟环境中在创建了。</span></span><br><span class="line">deactivate</span><br><span class="line"><span class="comment">#退出2.7.10环境</span></span><br><span class="line">pyenv <span class="built_in">local</span> --<span class="built_in">unset</span> 2.7.10</span><br><span class="line"><span class="built_in">source</span> .zshrc</span><br></pre></td></tr></table></figure>
-
-<p>python 3.x 虚拟环境创建类似 2.x</p>
-
+</ul><p><strong>virtualenv</strong> : <strong>site-packages隔离</strong>。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系统已经安装的 python 包影响。同时，在该环境中安装 python 包也不会影响其他项目。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/07/pyenv-and-virtualenv-for-python/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -450,7 +440,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-14 22:45:52" itemprop="dateModified" datetime="2019-11-14T22:45:52+08:00">2019-11-14</time>
+                <time title="Modified: 2020-04-10 11:51:10" itemprop="dateModified" datetime="2020-04-10T11:51:10+08:00">2020-04-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -495,25 +485,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-Install-sphinx-and-sphinx-rtd-theme"><a href="#1-Install-sphinx-and-sphinx-rtd-theme" class="headerlink" title="1. Install sphinx and sphinx-rtd-theme"></a>1. Install <strong>sphinx</strong> and <strong>sphinx-rtd-theme</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">workon py3dev </span><br><span class="line"></span><br><span class="line">pip install sphinx</span><br><span class="line">pip install sphinx-rtd-theme</span><br><span class="line"></span><br><span class="line">pip list</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-Init-a-project-with-sphinx"><a href="#2-Init-a-project-with-sphinx" class="headerlink" title="2. Init a project with sphinx."></a>2. Init a project with sphinx.</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mkdir sphinx_demo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> sphinx_demo</span><br><span class="line">sphinx-quickstart</span><br><span class="line"></span><br><span class="line"><span class="comment"># Choose seprate source and builder, for other configuration, choose whatever you want.</span></span><br><span class="line"></span><br><span class="line">mkdir src</span><br><span class="line"></span><br><span class="line">tree -L 1</span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── Makefile	<span class="comment"># build script for Unix.</span></span><br><span class="line">├── build 		<span class="comment"># sphinx docs build result.</span></span><br><span class="line">├── make.bat	<span class="comment"># build script for windows os.</span></span><br><span class="line">├── <span class="built_in">source</span>		<span class="comment"># source folder for sphinx docs.</span></span><br><span class="line">└── src 		<span class="comment"># user defined folder for python modules and scripts.</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="3-Config-sphinx"><a href="#3-Config-sphinx" class="headerlink" title="3. Config sphinx."></a>3. Config sphinx.</h1><p>Edit <strong>source/conf.py</strong></p>
-<p>3.1 Set python source folder.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># add those lines.</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">sys.path.insert(<span class="number">0</span>, os.path.abspath(<span class="string">'../src/'</span>))</span><br></pre></td></tr></table></figure>
-
-<p>3.2 Enable autodoc plugins.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">extensions = [</span><br><span class="line">    <span class="string">'sphinx.ext.autodoc'</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<p>3.3 Enable read-the-doc theme.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_theme = <span class="string">'sphinx_rtd_theme'</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="4-Build-sphinx-docs"><a href="#4-Build-sphinx-docs" class="headerlink" title="4. Build sphinx docs."></a>4. Build sphinx docs.</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make html 	<span class="comment"># build the docs by html builder.</span></span><br><span class="line"></span><br><span class="line">open build/html/index.html</span><br></pre></td></tr></table></figure>
-
-
-
-
+          <h1 id="1-Install-sphinx-and-sphinx-rtd-theme"><a href="#1-Install-sphinx-and-sphinx-rtd-theme" class="headerlink" title="1. Install sphinx and sphinx-rtd-theme"></a>1. Install <strong>sphinx</strong> and <strong>sphinx-rtd-theme</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">workon py3dev </span><br><span class="line"></span><br><span class="line">pip install sphinx</span><br><span class="line">pip install sphinx-rtd-theme</span><br><span class="line"></span><br><span class="line">pip list</span><br></pre></td></tr></table></figure><h1 id="2-Init-a-project-with-sphinx"><a href="#2-Init-a-project-with-sphinx" class="headerlink" title="2. Init a project with sphinx."></a>2. Init a project with sphinx.</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mkdir sphinx_demo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> sphinx_demo</span><br><span class="line">sphinx-quickstart</span><br><span class="line"></span><br><span class="line"><span class="comment"># Choose seprate source and builder, for other configuration, choose whatever you want.</span></span><br><span class="line"></span><br><span class="line">mkdir src</span><br><span class="line"></span><br><span class="line">tree -L 1</span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── Makefile	<span class="comment"># build script for Unix.</span></span><br><span class="line">├── build 		<span class="comment"># sphinx docs build result.</span></span><br><span class="line">├── make.bat	<span class="comment"># build script for windows os.</span></span><br><span class="line">├── <span class="built_in">source</span>		<span class="comment"># source folder for sphinx docs.</span></span><br><span class="line">└── src 		<span class="comment"># user defined folder for python modules and scripts.</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/06/01-sphinx-basic/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -608,9 +588,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>This is a post</p>
-<p>Pydoc can be used to access the doc for python modules or classes easily. We will show the basic command for the pydoc.</p>
-<ol>
+          <p>This is a post</p><p>Pydoc can be used to access the doc for python modules or classes easily. We will show the basic command for the pydoc.</p><ol>
 <li><p><strong>Show help for pydoc</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">pydoc -h</span><br><span class="line"></span><br><span class="line">pydoc - the Python documentation tool</span><br><span class="line"></span><br><span class="line">pydoc &lt;name&gt; ...</span><br><span class="line">    Show text documentation on something.  &lt;name&gt; may be the name of a</span><br><span class="line">    Python keyword, topic, <span class="keyword">function</span>, module, or package, or a dotted</span><br><span class="line">    reference to a class or <span class="keyword">function</span> within a module or module <span class="keyword">in</span> a</span><br><span class="line">    package.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is used as the path to a</span><br><span class="line">    Python <span class="built_in">source</span> file to document. If name is <span class="string">'keywords'</span>, <span class="string">'topics'</span>,</span><br><span class="line">    or <span class="string">'modules'</span>, a listing of these things is displayed.</span><br><span class="line"></span><br><span class="line">pydoc -k &lt;keyword&gt;</span><br><span class="line">    Search <span class="keyword">for</span> a keyword <span class="keyword">in</span> the synopsis lines of all available modules.</span><br><span class="line"></span><br><span class="line">pydoc -p &lt;port&gt;</span><br><span class="line">    Start an HTTP server on the given port on the <span class="built_in">local</span> machine.  Port</span><br><span class="line">    number 0 can be used to get an arbitrary unused port.</span><br><span class="line"></span><br><span class="line">pydoc -g</span><br><span class="line">    Pop up a graphical interface <span class="keyword">for</span> finding and serving documentation.</span><br><span class="line"></span><br><span class="line">pydoc -w &lt;name&gt; ...</span><br><span class="line">    Write out the HTML documentation <span class="keyword">for</span> a module to a file <span class="keyword">in</span> the current</span><br><span class="line">    directory.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is treated as a filename; <span class="keyword">if</span></span><br><span class="line">    it names a directory, documentation is written <span class="keyword">for</span> all the contents.</span><br></pre></td></tr></table></figure>
 </li>
@@ -626,14 +604,14 @@
 
 </li>
 </ol>
-<ol start="5">
-<li><p><strong>Start an HTTP server for pydoc on a free port</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Write out the HTML documentation for a module</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc -w json</span><br><span class="line"><span class="comment"># We will get json.html in current folder.</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/05/pydoc-basic-command/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -723,11 +701,14 @@
 
 </li>
 </ol>
-<p><strong>Ref:</strong></p>
-<ol>
-<li><a href="https://hexo.io/docs/one-command-deployment" target="_blank" rel="noopener">Hexo one-command-deploy</a></li>
-</ol>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/10/31/Deploy-hexo-blog-to-githubPage/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -792,12 +773,16 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">8</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -826,7 +811,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

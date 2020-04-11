@@ -51,13 +51,13 @@
   };
 </script>
 
-  <meta name="description" content="Enable local search for hexo blog with next theme. 1. Install Local Search plugin.1npm install hexo-generator-searchdb --save  2. Edit site config : _config.yml123456# Add these config to any position">
+  <meta name="description" content="Enable local search for hexo blog with next theme.1. Install Local Search plugin.1npm install hexo-generator-searchdb --save2. Edit site config : _config.yml">
 <meta name="keywords" content="hexo,next">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Local search for hexo">
 <meta property="og:url" content="https:&#x2F;&#x2F;danielpei.github.io&#x2F;2019&#x2F;11&#x2F;14&#x2F;Local-search-for-hexo&#x2F;index.html">
 <meta property="og:site_name" content="Daniel&#39;s blogs">
-<meta property="og:description" content="Enable local search for hexo blog with next theme. 1. Install Local Search plugin.1npm install hexo-generator-searchdb --save  2. Edit site config : _config.yml123456# Add these config to any position">
+<meta property="og:description" content="Enable local search for hexo blog with next theme.1. Install Local Search plugin.1npm install hexo-generator-searchdb --save2. Edit site config : _config.yml">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-11-14T16:02:37.000Z">
 <meta name="twitter:card" content="summary">
@@ -142,6 +142,16 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -269,10 +279,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Enable local search for hexo blog with <strong>next</strong> theme.</p>
-<h1 id="1-Install-Local-Search-plugin"><a href="#1-Install-Local-Search-plugin" class="headerlink" title="1. Install Local Search plugin."></a>1. Install <strong>Local Search</strong> plugin.</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+        <p>Enable local search for hexo blog with <strong>next</strong> theme.</p><h1 id="1-Install-Local-Search-plugin"><a href="#1-Install-Local-Search-plugin" class="headerlink" title="1. Install Local Search plugin."></a>1. Install <strong>Local Search</strong> plugin.</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure><h1 id="2-Edit-site-config-config-yml"><a href="#2-Edit-site-config-config-yml" class="headerlink" title="2. Edit site config : _config.yml"></a>2. Edit site config : <strong>_config.yml</strong></h1><a id="more"></a>
 
-<h1 id="2-Edit-site-config-config-yml"><a href="#2-Edit-site-config-config-yml" class="headerlink" title="2. Edit site config : _config.yml"></a>2. Edit site config : <strong>_config.yml</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Add these config to any position.</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Add these config to any position.</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
 
 <h1 id="3-Edit-theme-config-themes-next-config-yml"><a href="#3-Edit-theme-config-themes-next-config-yml" class="headerlink" title="3. Edit theme config : themes/next/_config.yml"></a>3. Edit theme config : <strong>themes/next/_config.yml</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
@@ -367,12 +377,16 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">categories</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">8</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -401,7 +415,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
