@@ -4,7 +4,9 @@
     <title>Spark dataframe basic</title>
     <url>/2020/04/11/spark/dataframe-basic/</url>
     <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>本篇主要记录 <strong>pyspark</strong> 操作 <strong>dataframe</strong> 的常见基本操作，以 <strong>hive</strong> 作为数据源进行示例。</p>
-<h1 id="Hive-数据源相关信息"><a href="#Hive-数据源相关信息" class="headerlink" title="Hive 数据源相关信息"></a>Hive 数据源相关信息</h1><p>查看 hive 数据源信息</p>
+<a id="more"></a>
+
+<h1 id="Hive-数据源相关信息"><a href="#Hive-数据源相关信息" class="headerlink" title="Hive 数据源相关信息"></a>Hive 数据源相关信息</h1><p>cd 查看 hive 数据源信息</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看 hive 数据库</span></span><br><span class="line">spark.sql(<span class="string">"show databases;"</span>).show()</span><br></pre></td></tr></table></figure>
 
 <h1 id="Dataframe-常用操作"><a href="#Dataframe-常用操作" class="headerlink" title="Dataframe 常用操作"></a>Dataframe 常用操作</h1><h2 id="Dataframe-自定义-UDF-函数"><a href="#Dataframe-自定义-UDF-函数" class="headerlink" title="Dataframe 自定义 UDF 函数"></a>Dataframe 自定义 UDF 函数</h2><p>通过 <strong>udf</strong> （ User defined function ） 可以将自定义的业务逻辑函数作用于 <em>dataframe</em>。</p>
@@ -33,6 +35,9 @@
     <url>/2019/11/14/Local-search-for-hexo/</url>
     <content><![CDATA[<p>Enable local search for hexo blog with <strong>next</strong> theme.</p>
 <h1 id="Install-Local-Search-plugin"><a href="#Install-Local-Search-plugin" class="headerlink" title="Install Local Search plugin."></a>Install <strong>Local Search</strong> plugin.</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
 
 <h1 id="Edit-site-config-config-yml"><a href="#Edit-site-config-config-yml" class="headerlink" title="Edit site config : _config.yml"></a>Edit site config : <strong>_config.yml</strong></h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add these config to any position.</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
 
@@ -66,6 +71,9 @@
 <ul>
 <li>快速激活／去激活某个 virtualenv 创建的虚拟环境；</li>
 </ul>
+<a id="more"></a>
+
+
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew install pyenv</span><br><span class="line">pip install virtualenv</span><br><span class="line">pip install virtualenvwrapper</span><br><span class="line"></span><br><span class="line"><span class="comment"># add the below line into ~/.bash_profile or ~/.zshrc, to auto-active pyenv</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">which</span> pyenv &gt; /dev/null; <span class="keyword">then</span> <span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span>; <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a root path for virtualenvs we will created by virtualenv and virtualenvwrapper.</span></span><br><span class="line">mkdir ~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set default path for virutalenvs in .zshrc or .bashrc.</span></span><br><span class="line"><span class="built_in">export</span> WORKON_HOME=~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalenvwrapper in .zshrc or .bashrc.</span></span><br><span class="line"><span class="comment">## As I am using python 3.7 created by pyenv, my virtualenvwrapper.sh script is located in */Users/daniel/.pyenv/versions/3.7.0/bin/virtualenvwrapper.sh*.</span></span><br><span class="line"><span class="built_in">source</span> /usr/<span class="built_in">local</span>/bin/virtualenvwrapper.sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalwrapper right now!</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
 
 <h1 id="pyenv"><a href="#pyenv" class="headerlink" title="pyenv"></a>pyenv</h1><p><strong>场景</strong>：Mac 自带的 python 版本为 2.7，遇到一个项目 <em>py3_project</em> 使用 python 3.X 的一些新特性，这时就需要用到 pyenv 将 python 版本临时切换到 3.X (随时可以一条命令再切换回来）。</p>
@@ -98,6 +106,8 @@
     <url>/2019/11/06/01-sphinx-basic/</url>
     <content><![CDATA[<h1 id="Install-sphinx-and-sphinx-rtd-theme"><a href="#Install-sphinx-and-sphinx-rtd-theme" class="headerlink" title="Install sphinx and sphinx-rtd-theme"></a>Install <strong>sphinx</strong> and <strong>sphinx-rtd-theme</strong></h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">workon py3dev </span><br><span class="line"></span><br><span class="line">pip install sphinx</span><br><span class="line">pip install sphinx-rtd-theme</span><br><span class="line"></span><br><span class="line">pip list</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
+
 <h1 id="Init-a-project-with-sphinx"><a href="#Init-a-project-with-sphinx" class="headerlink" title="Init a project with sphinx."></a>Init a project with sphinx.</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir sphinx_demo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> sphinx_demo</span><br><span class="line">sphinx-quickstart</span><br><span class="line"></span><br><span class="line"><span class="comment"># Choose seprate source and builder, for other configuration, choose whatever you want.</span></span><br><span class="line"></span><br><span class="line">mkdir src</span><br><span class="line"></span><br><span class="line">tree -L 1</span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── Makefile	<span class="comment"># build script for Unix.</span></span><br><span class="line">├── build 		<span class="comment"># sphinx docs build result.</span></span><br><span class="line">├── make.bat	<span class="comment"># build script for windows os.</span></span><br><span class="line">├── <span class="built_in">source</span>		<span class="comment"># source folder for sphinx docs.</span></span><br><span class="line">└── src 		<span class="comment"># user defined folder for python modules and scripts.</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="Config-sphinx"><a href="#Config-sphinx" class="headerlink" title="Config sphinx."></a>Config sphinx.</h1><p>Edit <strong>source/conf.py</strong></p>
@@ -126,6 +136,8 @@
     <url>/2019/11/05/pydoc-basic-command/</url>
     <content><![CDATA[<p>This is a post</p>
 <p>Pydoc can be used to access the doc for python modules or classes easily. We will show the basic command for the pydoc.</p>
+<a id="more"></a>
+
 <ol>
 <li><p><strong>Show help for pydoc</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pydoc -h</span><br><span class="line"></span><br><span class="line">pydoc - the Python documentation tool</span><br><span class="line"></span><br><span class="line">pydoc &lt;name&gt; ...</span><br><span class="line">    Show text documentation on something.  &lt;name&gt; may be the name of a</span><br><span class="line">    Python keyword, topic, <span class="keyword">function</span>, module, or package, or a dotted</span><br><span class="line">    reference to a class or <span class="keyword">function</span> within a module or module <span class="keyword">in</span> a</span><br><span class="line">    package.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is used as the path to a</span><br><span class="line">    Python <span class="built_in">source</span> file to document. If name is <span class="string">'keywords'</span>, <span class="string">'topics'</span>,</span><br><span class="line">    or <span class="string">'modules'</span>, a listing of these things is displayed.</span><br><span class="line"></span><br><span class="line">pydoc -k &lt;keyword&gt;</span><br><span class="line">    Search <span class="keyword">for</span> a keyword <span class="keyword">in</span> the synopsis lines of all available modules.</span><br><span class="line"></span><br><span class="line">pydoc -p &lt;port&gt;</span><br><span class="line">    Start an HTTP server on the given port on the <span class="built_in">local</span> machine.  Port</span><br><span class="line">    number 0 can be used to get an arbitrary unused port.</span><br><span class="line"></span><br><span class="line">pydoc -g</span><br><span class="line">    Pop up a graphical interface <span class="keyword">for</span> finding and serving documentation.</span><br><span class="line"></span><br><span class="line">pydoc -w &lt;name&gt; ...</span><br><span class="line">    Write out the HTML documentation <span class="keyword">for</span> a module to a file <span class="keyword">in</span> the current</span><br><span class="line">    directory.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is treated as a filename; <span class="keyword">if</span></span><br><span class="line">    it names a directory, documentation is written <span class="keyword">for</span> all the contents.</span><br></pre></td></tr></table></figure>
@@ -163,9 +175,13 @@
     <title>01-Deploy hexo blog to githubPage</title>
     <url>/2019/10/31/Deploy-hexo-blog-to-githubPage/</url>
     <content><![CDATA[<ol>
-<li><p>Install hexo-deployer-git.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo_project</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<li>Install hexo-deployer-git.<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo_project</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
 </li>
+</ol>
+<a id="more"></a>
+
+<ol start="2">
 <li><p>Edit <strong>_config.yml</strong></p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment">#https://github.com/DanielPei/danielpei.github.io</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">[branch]</span> <span class="comment"># master</span></span><br><span class="line"><span class="attr">  message:</span> <span class="string">[message]</span> <span class="comment"># leave this blank</span></span><br></pre></td></tr></table></figure>
 </li>

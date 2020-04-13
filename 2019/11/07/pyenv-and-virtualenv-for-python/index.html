@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="Daniel&#39;s blogs">
 <meta property="og:description" content="pyenv 与 virtualenv 是两个目的不同的 python 环境管理工具。 pyenv ： 版本切换。用于在多个不同的python版本之间进行切换并互不影响。  需要临时引用／安装当前python版本不支持的模块／库； 测试／验证不同python版本间兼容性；  virtualenv : site-packages隔离。为某个项目或目录创建一个独立的 python 环境，该环境不受当前系">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-11T13:55:13.893Z">
+<meta property="og:updated_time" content="2020-04-13T13:08:36.406Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://danielpei.github.io/2019/11/07/pyenv-and-virtualenv-for-python/">
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python-environment-management: pyenv + virtualenv + virtaulenvwrapper
+          Python-environment-management: pyenv + virtualenv + virtaulenvwrapper<a href="https://github.com/DanielPei/blog/tree/master/source/_posts_posts/pyenv-and-virtualenv-for-python.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pencil-alt"></i></a>
         </h1>
 
         <div class="post-meta">
@@ -207,7 +207,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-11 21:55:13" itemprop="dateModified" datetime="2020-04-11T21:55:13+08:00">2020-04-11</time>
+                <time title="Modified: 2020-04-13 21:08:36" itemprop="dateModified" datetime="2020-04-13T21:08:36+08:00">2020-04-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,6 +262,9 @@
 <ul>
 <li>快速激活／去激活某个 virtualenv 创建的虚拟环境；</li>
 </ul>
+<a id="more"></a>
+
+
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">brew install pyenv</span><br><span class="line">pip install virtualenv</span><br><span class="line">pip install virtualenvwrapper</span><br><span class="line"></span><br><span class="line"><span class="comment"># add the below line into ~/.bash_profile or ~/.zshrc, to auto-active pyenv</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">which</span> pyenv &gt; /dev/null; <span class="keyword">then</span> <span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span>; <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a root path for virtualenvs we will created by virtualenv and virtualenvwrapper.</span></span><br><span class="line">mkdir ~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set default path for virutalenvs in .zshrc or .bashrc.</span></span><br><span class="line"><span class="built_in">export</span> WORKON_HOME=~/.virtualenvs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalenvwrapper in .zshrc or .bashrc.</span></span><br><span class="line"><span class="comment">## As I am using python 3.7 created by pyenv, my virtualenvwrapper.sh script is located in */Users/daniel/.pyenv/versions/3.7.0/bin/virtualenvwrapper.sh*.</span></span><br><span class="line"><span class="built_in">source</span> /usr/<span class="built_in">local</span>/bin/virtualenvwrapper.sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable virutalwrapper right now!</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
 
 <h1 id="pyenv"><a href="#pyenv" class="headerlink" title="pyenv"></a>pyenv</h1><p><strong>场景</strong>：Mac 自带的 python 版本为 2.7，遇到一个项目 <em>py3_project</em> 使用 python 3.X 的一些新特性，这时就需要用到 pyenv 将 python 版本临时切换到 3.X (随时可以一条命令再切换回来）。</p>

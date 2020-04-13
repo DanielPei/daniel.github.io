@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"danielpei.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Install hexo-deployer-git. 12cd hexo_projectnpm install hexo-deployer-git --save  Edit _config.yml 12345deploy:  type: git  repo: &amp;lt;repository url&amp;gt; #https:&#x2F;&#x2F;github.com&#x2F;DanielPei&#x2F;danielpei.github">
+  <meta name="description" content="Install hexo-deployer-git.12cd hexo_projectnpm install hexo-deployer-git --save">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="01-Deploy hexo blog to githubPage">
 <meta property="og:url" content="https:&#x2F;&#x2F;danielpei.github.io&#x2F;2019&#x2F;10&#x2F;31&#x2F;Deploy-hexo-blog-to-githubPage&#x2F;index.html">
 <meta property="og:site_name" content="Daniel&#39;s blogs">
-<meta property="og:description" content="Install hexo-deployer-git. 12cd hexo_projectnpm install hexo-deployer-git --save  Edit _config.yml 12345deploy:  type: git  repo: &amp;lt;repository url&amp;gt; #https:&#x2F;&#x2F;github.com&#x2F;DanielPei&#x2F;danielpei.github">
+<meta property="og:description" content="Install hexo-deployer-git.12cd hexo_projectnpm install hexo-deployer-git --save">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-03T11:53:30.000Z">
+<meta property="og:updated_time" content="2020-04-13T13:08:05.649Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://danielpei.github.io/2019/10/31/Deploy-hexo-blog-to-githubPage/">
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          01-Deploy hexo blog to githubPage
+          01-Deploy hexo blog to githubPage<a href="https://github.com/DanielPei/blog/tree/master/source/_posts_posts/Deploy-hexo-blog-to-githubPage.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pencil-alt"></i></a>
         </h1>
 
         <div class="post-meta">
@@ -207,7 +207,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-03 19:53:30" itemprop="dateModified" datetime="2019-11-03T19:53:30+08:00">2019-11-03</time>
+                <time title="Modified: 2020-04-13 21:08:05" itemprop="dateModified" datetime="2020-04-13T21:08:05+08:00">2020-04-13</time>
               </span>
 
           
@@ -236,9 +236,13 @@
 
       
         <ol>
-<li><p>Install hexo-deployer-git.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo_project</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<li>Install hexo-deployer-git.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo_project</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
 </li>
+</ol>
+<a id="more"></a>
+
+<ol start="2">
 <li><p>Edit <strong>_config.yml</strong></p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment">#https://github.com/DanielPei/danielpei.github.io</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">[branch]</span> <span class="comment"># master</span></span><br><span class="line"><span class="attr">  message:</span> <span class="string">[message]</span> <span class="comment"># leave this blank</span></span><br></pre></td></tr></table></figure>
 </li>

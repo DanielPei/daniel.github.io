@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"danielpei.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Install sphinx and sphinx-rtd-theme123456workon py3dev pip install sphinxpip install sphinx-rtd-themepip list  Init a project with sphinx.1234567891011121314151617mkdir sphinx_democd sphinx_demosphinx">
+  <meta name="description" content="Install sphinx and sphinx-rtd-theme123456workon py3dev pip install sphinxpip install sphinx-rtd-themepip list">
 <meta name="keywords" content="python,sphinx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="01-sphinx : basic demo">
 <meta property="og:url" content="https:&#x2F;&#x2F;danielpei.github.io&#x2F;2019&#x2F;11&#x2F;06&#x2F;01-sphinx-basic&#x2F;index.html">
 <meta property="og:site_name" content="Daniel&#39;s blogs">
-<meta property="og:description" content="Install sphinx and sphinx-rtd-theme123456workon py3dev pip install sphinxpip install sphinx-rtd-themepip list  Init a project with sphinx.1234567891011121314151617mkdir sphinx_democd sphinx_demosphinx">
+<meta property="og:description" content="Install sphinx and sphinx-rtd-theme123456workon py3dev pip install sphinxpip install sphinx-rtd-themepip list">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-11T13:54:25.552Z">
+<meta property="og:updated_time" content="2020-04-13T13:07:55.311Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://danielpei.github.io/2019/11/06/01-sphinx-basic/">
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          01-sphinx : basic demo
+          01-sphinx : basic demo<a href="https://github.com/DanielPei/blog/tree/master/source/_posts_posts/01-sphinx-basic.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pencil-alt"></i></a>
         </h1>
 
         <div class="post-meta">
@@ -207,7 +207,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-11 21:54:25" itemprop="dateModified" datetime="2020-04-11T21:54:25+08:00">2020-04-11</time>
+                <time title="Modified: 2020-04-13 21:07:55" itemprop="dateModified" datetime="2020-04-13T21:07:55+08:00">2020-04-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -249,6 +249,8 @@
 
       
         <h1 id="Install-sphinx-and-sphinx-rtd-theme"><a href="#Install-sphinx-and-sphinx-rtd-theme" class="headerlink" title="Install sphinx and sphinx-rtd-theme"></a>Install <strong>sphinx</strong> and <strong>sphinx-rtd-theme</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">workon py3dev </span><br><span class="line"></span><br><span class="line">pip install sphinx</span><br><span class="line">pip install sphinx-rtd-theme</span><br><span class="line"></span><br><span class="line">pip list</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h1 id="Init-a-project-with-sphinx"><a href="#Init-a-project-with-sphinx" class="headerlink" title="Init a project with sphinx."></a>Init a project with sphinx.</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mkdir sphinx_demo</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> sphinx_demo</span><br><span class="line">sphinx-quickstart</span><br><span class="line"></span><br><span class="line"><span class="comment"># Choose seprate source and builder, for other configuration, choose whatever you want.</span></span><br><span class="line"></span><br><span class="line">mkdir src</span><br><span class="line"></span><br><span class="line">tree -L 1</span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">├── Makefile	<span class="comment"># build script for Unix.</span></span><br><span class="line">├── build 		<span class="comment"># sphinx docs build result.</span></span><br><span class="line">├── make.bat	<span class="comment"># build script for windows os.</span></span><br><span class="line">├── <span class="built_in">source</span>		<span class="comment"># source folder for sphinx docs.</span></span><br><span class="line">└── src 		<span class="comment"># user defined folder for python modules and scripts.</span></span><br></pre></td></tr></table></figure>
 
