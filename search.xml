@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Graph-neo4j-Basic-01</title>
+    <url>/2020/04/18/graph/neo4j-basic/</url>
+    <content><![CDATA[<h1 id="Graph-基本概念-："><a href="#Graph-基本概念-：" class="headerlink" title="Graph 基本概念 ："></a>Graph 基本概念 ：</h1><p>基本元素 ： </p>
+<ol>
+<li>Nodes ： 数据记录，对应实体，如一个人或一部电影就是一个Node。</li>
+<li>Relationships ： Nodes 之间的关系，如两个人（ Node ） 之间是 父子关系 （ Relationship ）。</li>
+<li>Properties ： 键值对属性集，如一个人的姓名（ name = daniel ),或一个关系的描述，如朋友关系的亲密度 （ rateing= 10 ）。</li>
+<li>Labels ： （分组）标签，用于将多个 Nodes 归为一组，比如 Alice 和 Bob 都是学生，那么这两个 Nodes 可以都打上 Student Label。一个 Node 可能有 0-N Labels。 Labels 无 Properties。</li>
+</ol>
+<p>与关系型数据库对应 ：</p>
+<ul>
+<li>Graph         &lt;–&gt; Database</li>
+<li>Label         &lt;–&gt; Table</li>
+<li>Node             &lt;–&gt; Row</li>
+<li>Propertie     &lt;–&gt; Field / Column</li>
+<li>Relationship     &lt;–&gt; Join fields ??? (Not sure)</li>
+</ul>
+<a id="more"></a>
+
+<p>元素表示 ： </p>
+<ol>
+<li>Nodes ：  圆；</li>
+<li>Relationships ： 连线；</li>
+<li>Properties ： 圈或线上的键值对文本；</li>
+<li>Labels ： 圈的颜色；（ 有多个 Labels 可能要考虑别的展示方式）</li>
+</ol>
+<p>备注 ： </p>
+<ol>
+<li>相同的 Nodes 可以有不同的属性集；</li>
+<li>属性可以是 字符串、数值 或 布尔；</li>
+<li>Neo4j can store billions of nodes；</li>
+</ol>
+<h1 id="Cypher"><a href="#Cypher" class="headerlink" title="Cypher"></a>Cypher</h1><p><strong>Cypher</strong> 是 Neo4j 的查询语言，可以理解为 SQL 与 My SQL 之间的关系。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">:help</span><br></pre></td></tr></table></figure>
+
+<h2 id="CREATE"><a href="#CREATE" class="headerlink" title="CREATE"></a>CREATE</h2><p>Create a node : <em>CREATE (p:Person { name: “Emil”, from: “Sweden”})</em></p>
+<blockquote>
+<p>Added 1 label, created 1 node, set 3 properties, completed after 9 ms.</p>
+</blockquote>
+<ul>
+<li>p : 变量名，建议有，否则无法根据 label 查询到；</li>
+<li>Person ： label 名称。</li>
+<li>{ name : XXX, from : XXX } : properties 属性集</li>
+</ul>
+<p>如果没有设置变量名，执行 ： <em>CREATE (Person { name: “Daniel”, from: “China”})</em></p>
+<blockquote>
+<p>Created 1 node, set 3 properties, completed after 20 ms.<br>且 <em>MATCH (n:Person) RETURN n LIMIT 25</em> 查不到<br><em>MATCH (n) RETURN n LIMIT 25</em> 能查到</p>
+</blockquote>
+<h2 id="MATCH"><a href="#MATCH" class="headerlink" title="MATCH"></a>MATCH</h2><p>Finding nodes : <em>MATCH (ee:Person) WHERE ee.name = “Emil” RETURN ee;</em><br>查询</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">MATCH (ee:Person) WHERE ee.name = &quot;Emil&quot;</span><br><span class="line">CREATE (js:Person &#123; name: &quot;Johan&quot;, from: &quot;Sweden&quot;, learn: &quot;surfing&quot; &#125;),</span><br><span class="line">(ir:Person &#123; name: &quot;Ian&quot;, from: &quot;England&quot;, title: &quot;author&quot; &#125;),</span><br><span class="line">(rvb:Person &#123; name: &quot;Rik&quot;, from: &quot;Belgium&quot;, pet: &quot;Orval&quot; &#125;),</span><br><span class="line">(ally:Person &#123; name: &quot;Allison&quot;, from: &quot;California&quot;, hobby: &quot;surfing&quot; &#125;),</span><br><span class="line">(ee)-[:KNOWS &#123;since: 2001&#125;]-&gt;(js),(ee)-[:KNOWS &#123;rating: 5&#125;]-&gt;(ir),</span><br><span class="line">(js)-[:KNOWS]-&gt;(ir),(js)-[:KNOWS]-&gt;(rvb),</span><br><span class="line">(ir)-[:KNOWS]-&gt;(js),(ir)-[:KNOWS]-&gt;(ally),</span><br><span class="line">(rvb)-[:KNOWS]-&gt;(ally)</span><br></pre></td></tr></table></figure>
+
+
+<p>MATCH (ee:Person)-[:KNOWS]-(friends)<br>WHERE ee.name = “Emil” RETURN ee, friends</p>
+<p>PROFILE MATCH (js:Person)-[:KNOWS]-()-[:KNOWS]-(surfer)<br>WHERE js.name = “Johan” AND surfer.hobby = “surfing”<br>RETURN DISTINCT surfer</p>
+<p>EXPLAIN MATCH (js:Person)-[:KNOWS]-()-[:KNOWS]-(surfer)<br>WHERE js.name = “Johan” AND surfer.hobby = “surfing”<br>RETURN DISTINCT surfer</p>
+<p>Movies and actors up to 4 “hops” away from Kevin Bacon</p>
+<p>MATCH (bacon:Person {name:”Kevin Bacon”})-[*1..4]-(hollywood)<br>RETURN DISTINCT hollywood</p>
+<p>MATCH p=shortestPath(<br>  (bacon:Person {name:”Kevin Bacon”})-[*]-(meg:Person {name:”Meg Ryan”})<br>)<br>RETURN p</p>
+<p>MATCH (tom:Person {name:”Tom Hanks”})-[:ACTED_IN]-&gt;(m)&lt;-[:ACTED_IN]-(coActors),<br>      (coActors)-[:ACTED_IN]-&gt;(m2)&lt;-[:ACTED_IN]-(cocoActors)<br>WHERE NOT (tom)-[:ACTED_IN]-&gt;()&lt;-[:ACTED_IN]-(cocoActors) AND tom &lt;&gt; cocoActors<br>RETURN cocoActors.name AS Recommended, count(*) AS Strength ORDER BY Strength DESC</p>
+<p>? PROFILE 和 EXPLAIN 的区别<br>？多个条件之间逻辑组合</p>
+<ul>
+<li>MATCH (nineties:Movie) WHERE nineties.released &gt;= 1990 AND nineties.released &lt; 2000 RETURN nineties.title</li>
+</ul>
+<p>? 为什么会自动过滤掉 TOM Hanks 本人<br>》 MATCH (tom:Person {name:”Tom Hanks”})-[:ACTED_IN]-&gt;(m)&lt;-[:ACTED_IN]-(coActors) RETURN coActors.name</p>
+]]></content>
+      <categories>
+        <category>graph</category>
+        <category>neo4j</category>
+      </categories>
+      <tags>
+        <tag>neo4j</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spark dataframe basic</title>
     <url>/2020/04/11/spark/dataframe-basic/</url>
     <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>本篇主要记录 <strong>pyspark</strong> 操作 <strong>dataframe</strong> 的常见基本操作，以 <strong>hive</strong> 作为数据源进行示例。</p>

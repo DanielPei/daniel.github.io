@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"danielpei.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="This is a post Pydoc can be used to access the doc for python modules or classes easily. We will show the basic command for the pydoc.">
-<meta name="keywords" content="python,pydoc">
+  <meta name="description" content="Graph 基本概念 ：基本元素 ：   Nodes ： 数据记录，对应实体，如一个人或一部电影就是一个Node。 Relationships ： Nodes 之间的关系，如两个人（ Node ） 之间是 父子关系 （ Relationship ）。 Properties ： 键值对属性集，如一个人的姓名（ name = daniel ),或一个关系的描述，如朋友关系的亲密度 （ rateing=">
+<meta name="keywords" content="neo4j">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pydoc-basic-command">
-<meta property="og:url" content="https:&#x2F;&#x2F;danielpei.github.io&#x2F;2019&#x2F;11&#x2F;05&#x2F;pydoc-basic-command&#x2F;index.html">
+<meta property="og:title" content="Graph-neo4j-Basic-01">
+<meta property="og:url" content="https:&#x2F;&#x2F;danielpei.github.io&#x2F;2020&#x2F;04&#x2F;18&#x2F;graph&#x2F;neo4j-basic&#x2F;index.html">
 <meta property="og:site_name" content="Daniel&#39;s blogs">
-<meta property="og:description" content="This is a post Pydoc can be used to access the doc for python modules or classes easily. We will show the basic command for the pydoc.">
+<meta property="og:description" content="Graph 基本概念 ：基本元素 ：   Nodes ： 数据记录，对应实体，如一个人或一部电影就是一个Node。 Relationships ： Nodes 之间的关系，如两个人（ Node ） 之间是 父子关系 （ Relationship ）。 Properties ： 键值对属性集，如一个人的姓名（ name = daniel ),或一个关系的描述，如朋友关系的亲密度 （ rateing=">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-13T13:08:28.579Z">
+<meta property="og:updated_time" content="2020-05-03T13:56:10.492Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://danielpei.github.io/2019/11/05/pydoc-basic-command/">
+<link rel="canonical" href="https://danielpei.github.io/2020/04/18/graph/neo4j-basic/">
 
 
 <script id="page-configurations">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>pydoc-basic-command | Daniel's blogs</title>
+  <title>Graph-neo4j-Basic-01 | Daniel's blogs</title>
   
 
 
@@ -177,7 +177,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://danielpei.github.io/2019/11/05/pydoc-basic-command/">
+    <link itemprop="mainEntityOfPage" href="https://danielpei.github.io/2020/04/18/graph/neo4j-basic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          pydoc-basic-command<a href="https://github.com/DanielPei/blog/tree/master/source/_posts_posts/pydoc-basic-command.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pencil-alt"></i></a>
+          Graph-neo4j-Basic-01<a href="https://github.com/DanielPei/blog/tree/master/source/_posts_posts/graph/neo4j-basic.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pencil-alt"></i></a>
         </h1>
 
         <div class="post-meta">
@@ -200,14 +200,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2019-11-05 22:43:09" itemprop="dateCreated datePublished" datetime="2019-11-05T22:43:09+08:00">2019-11-05</time>
+              <time title="Created: 2020-04-18 17:01:49" itemprop="dateCreated datePublished" datetime="2020-04-18T17:01:49+08:00">2020-04-18</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-13 21:08:28" itemprop="dateModified" datetime="2020-04-13T21:08:28+08:00">2020-04-13</time>
+                <time title="Modified: 2020-05-03 21:56:10" itemprop="dateModified" datetime="2020-05-03T21:56:10+08:00">2020-05-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -215,11 +215,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                  <a href="/categories/graph/" itemprop="url" rel="index"><span itemprop="name">graph</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/pydoc/" itemprop="url" rel="index"><span itemprop="name">pydoc</span></a>
+                  <a href="/categories/graph/neo4j/" itemprop="url" rel="index"><span itemprop="name">neo4j</span></a>
                 </span>
             </span>
 
@@ -232,8 +232,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2019/11/05/pydoc-basic-command/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/05/pydoc-basic-command/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/04/18/graph/neo4j-basic/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/18/graph/neo4j-basic/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -248,33 +248,68 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>This is a post</p>
-<p>Pydoc can be used to access the doc for python modules or classes easily. We will show the basic command for the pydoc.</p>
+        <h1 id="Graph-基本概念-："><a href="#Graph-基本概念-：" class="headerlink" title="Graph 基本概念 ："></a>Graph 基本概念 ：</h1><p>基本元素 ： </p>
+<ol>
+<li>Nodes ： 数据记录，对应实体，如一个人或一部电影就是一个Node。</li>
+<li>Relationships ： Nodes 之间的关系，如两个人（ Node ） 之间是 父子关系 （ Relationship ）。</li>
+<li>Properties ： 键值对属性集，如一个人的姓名（ name = daniel ),或一个关系的描述，如朋友关系的亲密度 （ rateing= 10 ）。</li>
+<li>Labels ： （分组）标签，用于将多个 Nodes 归为一组，比如 Alice 和 Bob 都是学生，那么这两个 Nodes 可以都打上 Student Label。一个 Node 可能有 0-N Labels。 Labels 无 Properties。</li>
+</ol>
+<p>与关系型数据库对应 ：</p>
+<ul>
+<li>Graph         &lt;–&gt; Database</li>
+<li>Label         &lt;–&gt; Table</li>
+<li>Node             &lt;–&gt; Row</li>
+<li>Propertie     &lt;–&gt; Field / Column</li>
+<li>Relationship     &lt;–&gt; Join fields ??? (Not sure)</li>
+</ul>
 <a id="more"></a>
 
+<p>元素表示 ： </p>
 <ol>
-<li><p><strong>Show help for pydoc</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">pydoc -h</span><br><span class="line"></span><br><span class="line">pydoc - the Python documentation tool</span><br><span class="line"></span><br><span class="line">pydoc &lt;name&gt; ...</span><br><span class="line">    Show text documentation on something.  &lt;name&gt; may be the name of a</span><br><span class="line">    Python keyword, topic, <span class="keyword">function</span>, module, or package, or a dotted</span><br><span class="line">    reference to a class or <span class="keyword">function</span> within a module or module <span class="keyword">in</span> a</span><br><span class="line">    package.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is used as the path to a</span><br><span class="line">    Python <span class="built_in">source</span> file to document. If name is <span class="string">'keywords'</span>, <span class="string">'topics'</span>,</span><br><span class="line">    or <span class="string">'modules'</span>, a listing of these things is displayed.</span><br><span class="line"></span><br><span class="line">pydoc -k &lt;keyword&gt;</span><br><span class="line">    Search <span class="keyword">for</span> a keyword <span class="keyword">in</span> the synopsis lines of all available modules.</span><br><span class="line"></span><br><span class="line">pydoc -p &lt;port&gt;</span><br><span class="line">    Start an HTTP server on the given port on the <span class="built_in">local</span> machine.  Port</span><br><span class="line">    number 0 can be used to get an arbitrary unused port.</span><br><span class="line"></span><br><span class="line">pydoc -g</span><br><span class="line">    Pop up a graphical interface <span class="keyword">for</span> finding and serving documentation.</span><br><span class="line"></span><br><span class="line">pydoc -w &lt;name&gt; ...</span><br><span class="line">    Write out the HTML documentation <span class="keyword">for</span> a module to a file <span class="keyword">in</span> the current</span><br><span class="line">    directory.  If &lt;name&gt; contains a <span class="string">'/'</span>, it is treated as a filename; <span class="keyword">if</span></span><br><span class="line">    it names a directory, documentation is written <span class="keyword">for</span> all the contents.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Show document for a python module.</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc pow</span><br><span class="line"></span><br><span class="line">Help on built-in <span class="keyword">function</span> pow <span class="keyword">in</span> module __builtin__:</span><br><span class="line"></span><br><span class="line">pow(...)</span><br><span class="line">    pow(x, y[, z]) -&gt; number</span><br><span class="line"></span><br><span class="line">    With two arguments, equivalent to x**y.  With three arguments,</span><br><span class="line">    equivalent to (x**y) % z, but may be more efficient (e.g. <span class="keyword">for</span> longs).</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Search python modules with specific keyword</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Find python modules which name contains "json"</span></span><br><span class="line">python -m pydoc -k json</span><br><span class="line"></span><br><span class="line">json - JSON (JavaScript Object Notation) &lt;http://json.org&gt; is a subset of</span><br><span class="line">json.decoder - Implementation of JSONDecoder</span><br><span class="line">json.encoder - Implementation of JSONEncoder</span><br><span class="line">json.scanner - JSON token scanner</span><br><span class="line">json.tests</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Start an HTTP server for pydoc on the given port</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc -p 4000</span><br><span class="line"><span class="comment"># Open the browser and visit "http://localhost:4000" to view the documents for all your local python modules.</span></span><br></pre></td></tr></table></figure>
+<li>Nodes ：  圆；</li>
+<li>Relationships ： 连线；</li>
+<li>Properties ： 圈或线上的键值对文本；</li>
+<li>Labels ： 圈的颜色；（ 有多个 Labels 可能要考虑别的展示方式）</li>
+</ol>
+<p>备注 ： </p>
+<ol>
+<li>相同的 Nodes 可以有不同的属性集；</li>
+<li>属性可以是 字符串、数值 或 布尔；</li>
+<li>Neo4j can store billions of nodes；</li>
+</ol>
+<h1 id="Cypher"><a href="#Cypher" class="headerlink" title="Cypher"></a>Cypher</h1><p><strong>Cypher</strong> 是 Neo4j 的查询语言，可以理解为 SQL 与 My SQL 之间的关系。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:help</span><br></pre></td></tr></table></figure>
+
+<h2 id="CREATE"><a href="#CREATE" class="headerlink" title="CREATE"></a>CREATE</h2><p>Create a node : <em>CREATE (p:Person { name: “Emil”, from: “Sweden”})</em></p>
+<blockquote>
+<p>Added 1 label, created 1 node, set 3 properties, completed after 9 ms.</p>
+</blockquote>
+<ul>
+<li>p : 变量名，建议有，否则无法根据 label 查询到；</li>
+<li>Person ： label 名称。</li>
+<li>{ name : XXX, from : XXX } : properties 属性集</li>
+</ul>
+<p>如果没有设置变量名，执行 ： <em>CREATE (Person { name: “Daniel”, from: “China”})</em></p>
+<blockquote>
+<p>Created 1 node, set 3 properties, completed after 20 ms.<br>且 <em>MATCH (n:Person) RETURN n LIMIT 25</em> 查不到<br><em>MATCH (n) RETURN n LIMIT 25</em> 能查到</p>
+</blockquote>
+<h2 id="MATCH"><a href="#MATCH" class="headerlink" title="MATCH"></a>MATCH</h2><p>Finding nodes : <em>MATCH (ee:Person) WHERE ee.name = “Emil” RETURN ee;</em><br>查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MATCH (ee:Person) WHERE ee.name = &quot;Emil&quot;</span><br><span class="line">CREATE (js:Person &#123; name: &quot;Johan&quot;, from: &quot;Sweden&quot;, learn: &quot;surfing&quot; &#125;),</span><br><span class="line">(ir:Person &#123; name: &quot;Ian&quot;, from: &quot;England&quot;, title: &quot;author&quot; &#125;),</span><br><span class="line">(rvb:Person &#123; name: &quot;Rik&quot;, from: &quot;Belgium&quot;, pet: &quot;Orval&quot; &#125;),</span><br><span class="line">(ally:Person &#123; name: &quot;Allison&quot;, from: &quot;California&quot;, hobby: &quot;surfing&quot; &#125;),</span><br><span class="line">(ee)-[:KNOWS &#123;since: 2001&#125;]-&gt;(js),(ee)-[:KNOWS &#123;rating: 5&#125;]-&gt;(ir),</span><br><span class="line">(js)-[:KNOWS]-&gt;(ir),(js)-[:KNOWS]-&gt;(rvb),</span><br><span class="line">(ir)-[:KNOWS]-&gt;(js),(ir)-[:KNOWS]-&gt;(ally),</span><br><span class="line">(rvb)-[:KNOWS]-&gt;(ally)</span><br></pre></td></tr></table></figure>
 
 
-</li>
-</ol>
-<ol start="5">
-<li><p><strong>Start an HTTP server for pydoc on a free port</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Write out the HTML documentation for a module</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pydoc -w json</span><br><span class="line"><span class="comment"># We will get json.html in current folder.</span></span><br></pre></td></tr></table></figure></li>
-</ol>
+<p>MATCH (ee:Person)-[:KNOWS]-(friends)<br>WHERE ee.name = “Emil” RETURN ee, friends</p>
+<p>PROFILE MATCH (js:Person)-[:KNOWS]-()-[:KNOWS]-(surfer)<br>WHERE js.name = “Johan” AND surfer.hobby = “surfing”<br>RETURN DISTINCT surfer</p>
+<p>EXPLAIN MATCH (js:Person)-[:KNOWS]-()-[:KNOWS]-(surfer)<br>WHERE js.name = “Johan” AND surfer.hobby = “surfing”<br>RETURN DISTINCT surfer</p>
+<p>Movies and actors up to 4 “hops” away from Kevin Bacon</p>
+<p>MATCH (bacon:Person {name:”Kevin Bacon”})-[*1..4]-(hollywood)<br>RETURN DISTINCT hollywood</p>
+<p>MATCH p=shortestPath(<br>  (bacon:Person {name:”Kevin Bacon”})-[*]-(meg:Person {name:”Meg Ryan”})<br>)<br>RETURN p</p>
+<p>MATCH (tom:Person {name:”Tom Hanks”})-[:ACTED_IN]-&gt;(m)&lt;-[:ACTED_IN]-(coActors),<br>      (coActors)-[:ACTED_IN]-&gt;(m2)&lt;-[:ACTED_IN]-(cocoActors)<br>WHERE NOT (tom)-[:ACTED_IN]-&gt;()&lt;-[:ACTED_IN]-(cocoActors) AND tom &lt;&gt; cocoActors<br>RETURN cocoActors.name AS Recommended, count(*) AS Strength ORDER BY Strength DESC</p>
+<p>? PROFILE 和 EXPLAIN 的区别<br>？多个条件之间逻辑组合</p>
+<ul>
+<li>MATCH (nineties:Movie) WHERE nineties.released &gt;= 1990 AND nineties.released &lt; 2000 RETURN nineties.title</li>
+</ul>
+<p>? 为什么会自动过滤掉 TOM Hanks 本人<br>》 MATCH (tom:Person {name:”Tom Hanks”})-[:ACTED_IN]-&gt;(m)&lt;-[:ACTED_IN]-(coActors) RETURN coActors.name</p>
 
     </div>
 
@@ -284,8 +319,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/python/" rel="tag"># python</a>
-              <a href="/tags/pydoc/" rel="tag"># pydoc</a>
+              <a href="/tags/neo4j/" rel="tag"># neo4j</a>
           </div>
 
         
@@ -294,13 +328,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/10/31/Deploy-hexo-blog-to-githubPage/" rel="prev" title="01-Deploy hexo blog to githubPage">
-      <i class="fa fa-chevron-left"></i> 01-Deploy hexo blog to githubPage
+    <a href="/2020/04/11/spark/dataframe-basic/" rel="prev" title="Spark dataframe basic">
+      <i class="fa fa-chevron-left"></i> Spark dataframe basic
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/11/06/01-sphinx-basic/" rel="next" title="01-sphinx : basic demo">
-      01-sphinx : basic demo <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -366,6 +397,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Graph-基本概念-："><span class="nav-number">1.</span> <span class="nav-text">Graph 基本概念 ：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cypher"><span class="nav-number">2.</span> <span class="nav-text">Cypher</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CREATE"><span class="nav-number">2.1.</span> <span class="nav-text">CREATE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MATCH"><span class="nav-number">2.2.</span> <span class="nav-text">MATCH</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -483,9 +515,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://danielpei.github.io/2019/11/05/pydoc-basic-command/";
-    this.page.identifier = "2019/11/05/pydoc-basic-command/";
-    this.page.title = "pydoc-basic-command";
+    this.page.url = "https://danielpei.github.io/2020/04/18/graph/neo4j-basic/";
+    this.page.identifier = "2020/04/18/graph/neo4j-basic/";
+    this.page.title = "Graph-neo4j-Basic-01";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
